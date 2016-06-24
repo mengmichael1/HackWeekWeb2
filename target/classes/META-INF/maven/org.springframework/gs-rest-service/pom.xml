@@ -28,11 +28,6 @@
             <artifactId>json-path</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-    		<groupId>com.box</groupId>
-    		<artifactId>box-java-sdk</artifactId>
-    		<version>2.1.1</version>
-		</dependency>
 		<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -47,6 +42,30 @@
 			<artifactId>json</artifactId>
 			<version>20151123</version>
 		</dependency>
+ 
+		<dependency>
+    		<groupId>org.webjars</groupId>
+    		<artifactId>bootstrap</artifactId>
+    		<version>3.2.0</version>
+    		<exclusions>
+        		<exclusion>
+            		<groupId>org.webjars</groupId>
+            		<artifactId>jquery</artifactId>
+        		</exclusion>
+    		</exclusions>
+		</dependency>
+		
+		<dependency>
+ 			<groupId>org.webjars</groupId>
+ 			<artifactId>bootstrap</artifactId>
+ 			<version>3.3.4</version>
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>org.webjars</groupId>
+ 			<artifactId>jquery</artifactId>
+ 			<version>2.1.4</version>
+ 		</dependency>
+		
     </dependencies>
 
     <properties>
