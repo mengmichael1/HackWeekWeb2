@@ -55,6 +55,7 @@
 			
 			// create table element
 			var $table	= $('<table></table>')
+				.css("margin", "auto")
 				.css("width", options.width+"px")
 				.css("height", options.height+"px")
 				.css("border", "0px")

@@ -31,20 +31,29 @@
  -->
 </head>
 
-<body style="color:blue;">
+<body style="background-color: #752bab">
 
-<div class="container">
-    <div class="jumbotron">
-        <img src="../static/images/ebay.png"
-             th:src="@{images/ebay.png}"
+<div class="container" style="margin: auto; padding: 20px; padding-bottom: 0px">
+
+    <div class="jumbotron" style="border: 20px solid white; padding-bottom: 0px">
+        <img src="../static/images/ebayonMe.png"
+             th:src="@{images/ebayonMe.png}"
              style="width:100%;height:100%;"/>
              
-        <h1>QR Code</h1>
+        <!-- <h1>QR Code</h1>
     	<p th:text= "'TID that will be turned into QR Code: ' + ${info.tid}" />
     	
     	<h1>Google Maps Integration</h1>
     	<p th:text="'Gift Pickup Lat: ' + ${info.lat}" />
-    	<p th:text="'Gift Pickup Lon: ' + ${info.lon}" />  
+    	<p th:text="'Gift Pickup Lon: ' + ${info.lon}" />   -->
+    	
+    	<h1>John Pyun sent you a gift!</h1>
+    	
+    	<h2> Message: </h2>
+    	<h3> <i> Happy 21st Birthday! Sorry I'll be unable to join your party tonight, but here's a drink on me. </i> </h3>
+    	<br></br>
+    	
+    	<h2> To redeem your gift, show the QR Code below to the merchant: </h2>
     	
     </div>
 	
@@ -57,7 +66,6 @@
   		});
   		
   		function initMap() {
-  			alert("Init Map");
   			var tid = /*[[${info.tid}]]*/;  
   			
   			jQuery('#qrcodeTable').qrcode({
@@ -109,8 +117,8 @@
 	</script>
 	
 	
-	
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGtEuBJThKB9r7R0wEpjT4e-fxK5W1_IE" 
+	<script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGtEuBJThKB9r7R0wEpjT4e-fxK5W1_IE" 
 	th:src="@{https://maps.googleapis.com/maps/api/js?key=AIzaSyDGtEuBJThKB9r7R0wEpjT4e-fxK5W1_IE}"
 	>
 		/* initMap(); */
@@ -119,12 +127,14 @@
 </div>
 
 
-	<div id="qrcodeTable"></div>
+	<div id="qrcodeTable" style="margin: auto; padding: 20px; padding-top: 0px"></div>
 	
-	<div id="map"></div>
+	<div id="map" style="margin: auto; padding: 20px;"></div>
 
-	<div class="container">
- 		<button type="button" class="btn btn-lg btn-primary">Gift Back?</button>
+	<div class="container" style="padding-top: 30px">
+ 		<button type="button" 
+ 				class="btn btn-lg btn-primary center-block" 
+ 				style="font-size: 40px; margin: auto"> Gift Back? </button>
 	</div>
    
 </body>
