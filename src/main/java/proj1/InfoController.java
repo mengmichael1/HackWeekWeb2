@@ -11,11 +11,11 @@ public class InfoController {
 
     @RequestMapping(value="/redeem", method=RequestMethod.GET)
     public String info(@RequestParam(value="tid") String tid,
-    		@RequestParam(value="lat") double lat,
-    		@RequestParam(value="lon") double lon,
+    		@RequestParam(value="lat", required = false) double lat,
+    		@RequestParam(value="lon", required = false) double lon,
     		@RequestParam(value="iid") String iid,
-    		@RequestParam(value="address") String address,
-    		@RequestParam(value="name") String name,
+    		@RequestParam(value="address", required = false) String address,
+    		@RequestParam(value="name", required = false) String name,
     		Model model) {
     	
     	model.addAttribute("info", new Info(tid, lat, lon, iid, address, name));
