@@ -55,6 +55,10 @@
     	
     	<h2> To redeem your gift, show the QR Code below to the merchant: </h2>
     	
+    	<div id="qrcodeTable" style="margin: auto; padding: 20px; padding-top: 0px"></div>
+    	
+    	<h2>Gift Venue: 199 Fremont St. San Francisco, CA </h2>
+    	
     </div>
 	
 	<script th:inline="javascript">
@@ -118,23 +122,20 @@
 	
 	
 	<script
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGtEuBJThKB9r7R0wEpjT4e-fxK5W1_IE" 
-	th:src="@{https://maps.googleapis.com/maps/api/js?key=AIzaSyDGtEuBJThKB9r7R0wEpjT4e-fxK5W1_IE}"
-	>
-		/* initMap(); */
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGtEuBJThKB9r7R0wEpjT4e-fxK5W1_IE" >
 	</script>
 	
 </div>
 
 
-	<div id="qrcodeTable" style="margin: auto; padding: 20px; padding-top: 0px"></div>
+	
 	
 	<div id="map" style="margin: auto; padding: 20px;"></div>
 
 	<div class="container" style="padding-top: 30px">
  		<button type="button" 
- 				class="btn btn-lg btn-primary center-block" 
- 				style="font-size: 40px; margin: auto"> Gift Back? </button>
+ 				class="btn btn-lg btn-info center-block" 
+ 				style="font-size: 40px; margin: auto"> Download our app to send a gift back! </button>
 	</div>
    
 </body>
