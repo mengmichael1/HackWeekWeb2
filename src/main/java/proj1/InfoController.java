@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class InfoController {
 
     @RequestMapping(value="/redeem", method=RequestMethod.GET)
-    public String info(@RequestParam(value="tid") long tid,
+    public String info(@RequestParam(value="tid") String tid,
     		@RequestParam(value="lat") double lat,
     		@RequestParam(value="lon") double lon,
-    		@RequestParam(value="iid") long iid,
+    		@RequestParam(value="iid") String iid,
     		@RequestParam(value="address") String address,
     		@RequestParam(value="name") String name,
     		Model model) {

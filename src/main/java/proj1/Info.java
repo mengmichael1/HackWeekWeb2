@@ -1,10 +1,10 @@
 package proj1;
 
 public class Info {
-	private long tid;
+	private String tid;
 	private double lat;
 	private double lon;
-	private long iid;
+	private String iid;
 	private String address;
 	private String name;
 	
@@ -12,7 +12,7 @@ public class Info {
 		
 	}
 	
-	public Info(long tid, double lat, double lon, long iid, String address, String name) {
+	public Info(String tid, double lat, double lon, String iid, String address, String name) {
 		this.tid = tid;
 		this.lat = lat;
 		this.lon = lon;
@@ -21,11 +21,11 @@ public class Info {
 		this.name = name;
 	}
 	
-	public long getTid() {
+	public String getTid() {
 		return tid;
 	}
 	
-	public void setTid(long tid) {
+	public void setTid(String tid) {
 		this.tid = tid;
 	}
 
@@ -45,11 +45,11 @@ public class Info {
 		this.lon = lon;
 	}
 
-	public long getIid() {
+	public String getIid() {
 		return iid;
 	}
 
-	public void setIid(long iid) {
+	public void setIid(String iid) {
 		this.iid = iid;
 	}
 
