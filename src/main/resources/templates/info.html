@@ -50,14 +50,16 @@
     	<h1>John Pyun sent you a gift!</h1>
     	
     	<h2> Message: </h2>
-    	<h3> <i> Happy 21st Birthday! Sorry I'll be unable to join your party tonight, but here's a drink on me. </i> </h3>
+    	<h3> <i> Happy 21st Birthday! Sorry that I'll be unable to join your party tonight, but here's a drink on me. </i> </h3>
     	<br></br>
     	
     	<h2> To redeem your gift, show the QR Code below to the merchant: </h2>
     	
     	<div id="qrcodeTable" style="margin: auto; padding: 20px; padding-top: 0px"></div>
     	
-    	<h2>Gift Venue: 199 Fremont St. San Francisco, CA </h2>
+    	<h2 th:text= "'Gift Venue: ' + ${info.name}"> </h2>
+    	<h2 th:text= "'Venue Address: ' + ${info.address}"> </h2>
+    	
     	
     </div>
 	
@@ -70,11 +72,12 @@
   		});
   		
   		function initMap() {
-  			var tid = /*[[${info.tid}]]*/;  
+  			var tid = /*[[${info.tid}]]*/; 
+  			var iid = /*[[${info.iid}]]*/;
   			
   			jQuery('#qrcodeTable').qrcode({
   	      		render    : "table",
-  	      		text    : 'TID: ' + tid
+  	      		text    : tid + ',' + iid
   	  		});
 
   			navigator.geolocation.getCurrentPosition(success);
@@ -116,7 +119,7 @@
   		 });
   		}
   		
-  		/*]]>*/
+  		/*]]>*/ 
   		
 	</script>
 	

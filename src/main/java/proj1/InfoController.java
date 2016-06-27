@@ -12,10 +12,13 @@ public class InfoController {
     @RequestMapping(value="/redeem", method=RequestMethod.GET)
     public String info(@RequestParam(value="tid") long tid,
     		@RequestParam(value="lat") double lat,
-    		@RequestParam(value="lat") double lon,
+    		@RequestParam(value="lon") double lon,
+    		@RequestParam(value="iid") long iid,
+    		@RequestParam(value="address") String address,
+    		@RequestParam(value="name") String name,
     		Model model) {
     	
-    	model.addAttribute("info", new Info(tid, lat, lon));
+    	model.addAttribute("info", new Info(tid, lat, lon, iid, address, name));
     	return "info";
     }
 }
