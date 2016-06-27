@@ -22,16 +22,16 @@
 			th:src="@{js/qrcode.js}"></script>
 			
 <!-- 	<link rel="stylesheet" type="text/css" href="../static/css/infostyle.css" th:href="@{/static/css/infostyle.css}"/> -->
-	<style>
+	<!-- <style>
 	
 	#qrcodeTable {
 		text-align: center;
 	}
 	</style>
-
+ -->
 </head>
 
-<body>
+<body style="color:blue;">
 
 <div class="container">
     <div class="jumbotron">
@@ -105,14 +105,15 @@
   		}
   		
   		/*]]>*/
+  		
 	</script>
 	
 	
-	<!-- <script
-		src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCcYblLLguNebQpe1Mw8MgvL8LlwmKFRto&callback=initMap" async defer>
-	</script> -->
 	
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRhdHLuZOo4vQE1eN0WVAt7fLI-VV3Pxg">
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGtEuBJThKB9r7R0wEpjT4e-fxK5W1_IE" 
+	th:src="@{https://maps.googleapis.com/maps/api/js?key=AIzaSyDGtEuBJThKB9r7R0wEpjT4e-fxK5W1_IE}"
+	>
+		/* initMap(); */
 	</script>
 	
 </div>
