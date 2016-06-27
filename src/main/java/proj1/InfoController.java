@@ -11,8 +11,8 @@ public class InfoController {
 
     @RequestMapping(value="/redeem", method=RequestMethod.GET)
     public String info(@RequestParam(value="tid") String tid,
-    		@RequestParam(value="lat", required = false) double lat,
-    		@RequestParam(value="lon", required = false) double lon,
+    		@RequestParam(value="lat", required = false) String lat,
+    		@RequestParam(value="lon", required = false) String lon,
     		@RequestParam(value="iid") String iid,
     		@RequestParam(value="address", required = false) String address,
     		@RequestParam(value="name", required = false) String name,

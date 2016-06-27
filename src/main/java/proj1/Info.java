@@ -2,8 +2,8 @@ package proj1;
 
 public class Info {
 	private String tid;
-	private double lat;
-	private double lon;
+	private String lat;
+	private String lon;
 	private String iid;
 	private String address;
 	private String name;
@@ -12,7 +12,7 @@ public class Info {
 		
 	}
 	
-	public Info(String tid, double lat, double lon, String iid, String address, String name) {
+	public Info(String tid, String lat, String lon, String iid, String address, String name) {
 		this.tid = tid;
 		this.lat = lat;
 		this.lon = lon;
@@ -29,19 +29,19 @@ public class Info {
 		this.tid = tid;
 	}
 
-	public double getLat() {
+	public String getLat() {
 		return lat;
 	}
 
-	public void setLat(double lat) {
+	public void setLat(String lat) {
 		this.lat = lat;
 	}
 
-	public double getLon() {
+	public String getLon() {
 		return lon;
 	}
 
-	public void setLon(double lon) {
+	public void setLon(String lon) {
 		this.lon = lon;
 	}
 
