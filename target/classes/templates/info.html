@@ -47,7 +47,7 @@
     	<p th:text="'Gift Pickup Lat: ' + ${info.lat}" />
     	<p th:text="'Gift Pickup Lon: ' + ${info.lon}" />   -->
     	
-    	<h1>John Pyun sent you a gift!</h1>
+    	<h1>Scott Cutler sent you a gift!</h1>
     	
     	<h2> Message: </h2>
     	<h3> <i> Happy 21st Birthday! Sorry that I'll be unable to join your party tonight, but here's a drink on me. </i> </h3>
@@ -59,8 +59,12 @@
     	
     	<h2 th:text= "'Gift Venue: ' + ${info.name}"> </h2>
     	<h2 th:text= "'Venue Address: ' + ${info.address}"> </h2>
+    	<h3> <i> Today's Hours: 11 AM - 11 PM </i> </h3>
+    	<h3> <i> Contact: (415) 369-6100 </i> </h3>
     	
+    	<br></br>
     	
+    	<div id="map" style="margin: auto; padding: 20px; height: 400px"></div>
     </div>
 	
 	<script th:inline="javascript">
@@ -84,16 +88,16 @@
   		}
   		
   		function success(position) {
-  		    var pos = {
+  		    var current_pos = {
   		       lat: position.coords.latitude,
   		       lng: position.coords.longitude
   		     };
-  		 var chicago = {lat: 41.85, lng: -87.65};
-  		 var indianapolis = {lat: 39.79, lng: -86.14};
-  		 chicago = pos;
+  		 
+  		 var dest_pos = {lat:  37.783850, lng: -122.403003};
+  		
 
   		 var map = new google.maps.Map(document.getElementById('map'), {
-  		   center: chicago,
+  		   center: current_pos,
   		   scrollwheel: false,
   		   zoom: 7
   		 });
@@ -104,8 +108,8 @@
 
   		 // Set destination, origin and travel mode.
   		 var request = {
-  		   destination: indianapolis,
-  		   origin: chicago,
+  		   destination: dest_pos,
+  		   origin: current_pos,
   		   travelMode: google.maps.TravelMode.DRIVING
   		 };
 
@@ -123,20 +127,15 @@
   		
 	</script>
 	
-	
-	<script
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGtEuBJThKB9r7R0wEpjT4e-fxK5W1_IE" >
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKQ6FLXXQi7_Dqw1_7HmYvwCRfKqjriGU">
 	</script>
 	
 </div>
 
-
-	
-	
-	<div id="map" style="margin: auto; padding: 20px;"></div>
-
 	<div class="container" style="padding-top: 30px">
- 		<button type="button" 
+ 		<button 
+ 				onclick="location.href = 'https://itunes.apple.com/us/app/ebay/id282614216?mt=8';"
+ 				type="button" 
  				class="btn btn-lg btn-info center-block" 
  				style="font-size: 40px; margin: auto"> Download our app to send a gift back! </button>
 	</div>
