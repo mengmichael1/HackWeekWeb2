@@ -6,7 +6,7 @@ public class Info {
 	private String lon;
 	private String iid;
 	private String address;
-	private String name;
+	private String name; // for now, refers to sender name (but can later change to gift venue name)
 	
 	public Info() {
 		
